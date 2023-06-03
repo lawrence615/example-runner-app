@@ -4,8 +4,9 @@ The Example Runner App is a Laravel app designed to streamline the process of ru
 
 
 ## Key Experiments
+Below are existing experiments in the app:
 
-### Sortable lists
+### 1. Sortable lists
 The experiment shows how you can build a sortable list and also persist changes in the database.
 
 ## Getting Started
