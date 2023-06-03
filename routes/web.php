@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('pages.home');
-});
+})->name('home');
 
 Route::controller(TaskController::class)->prefix('tasks')->group(function () {
     Route::get('/', [TaskController::class, 'index'])->name('tasks');
