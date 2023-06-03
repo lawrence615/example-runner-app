@@ -17,23 +17,7 @@ class TaskItemController extends Controller
     {
         try {
 
-            $data = json_decode($request->getContent(),true);
-
-            // $ids = array_column($data, 'id');
-
-            // $attributesToUpdate = [
-            //     'position'
-            // ];
-
-            // $valuesToUpdate = [];
-
-            // foreach ($attributesToUpdate as $attribute) {
-            //     $valuesToUpdate[$attribute] = array_column($data, $attribute);
-            // }
-
-            // Log::info($valuesToUpdate);
-
-            // TaskItem::whereIn('id', $ids)->update($valuesToUpdate);
+            $data = json_decode($request->getContent(), true);
 
             foreach ($data as $item) {
                 $model = TaskItem::findOrFail($item['id']);
@@ -41,11 +25,6 @@ class TaskItemController extends Controller
                 $model->save(); // Save the changes to the database
                 Log::info($item);
             }
-
-            // $data->map(function ($item){
-            //     Log::info($item);
-            //     // return get_object_vars($item);
-            // });
 
             return response()->json(['success' => 'Got Simple Ajax Request.']);
         } catch (Exception $e) {
