@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Task;
+use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Http\Request;
+use PDOException;
 
 class TaskController extends Controller
 {
@@ -14,22 +15,25 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks = Task::where('active', 1)->withCount('items')->get();
+        try {
+            $tasks = Task::where('active', 1)->withCount('items')->get();
 
-        // print_r($tasks);
-        // ->orderBy('position', 'asc')
-
-        return view('pages.task.index', compact('tasks'));
+            return view('pages.task.index', compact('tasks'));
+        } catch (Exception $exception) {
+            abort(500);
+        }
     }
 
     public function view($id)
     {
         try {
-            $task = Task::find($id);
+            $task = Task::findOrFail($id);
 
             return view('pages.task.view', compact('task'));
-        } catch (ModelNotFoundException $mdfe) {
-            //throw $th;
+        } catch (ModelNotFoundException $exception) {
+            throw new ModelNotFoundException("Error Processing Request", 404);
+        } catch (Exception $exception) {
+            abort(500);
         }
     }
 
