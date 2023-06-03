@@ -3,11 +3,19 @@
 The Example Runner App is a Laravel app designed to streamline the process of running experiments.
 
 
+
+
 ## Key Experiments
 Below are existing experiments in the app:
 
+
+
+
 ### 1. Sortable lists
 The experiment shows how you can build a sortable list and also persist changes in the database.
+
+
+
 
 ## Getting Started
 
@@ -59,6 +67,8 @@ NB: By default, the application will be accessible at `http://localhost:8000`.
 Open your web browser and visit `http://localhost:8000` (or the specified port).
 
 If everything is set up correctly, you should see the Example App home page.
+
+
 
 
 ## Feedback and Support
