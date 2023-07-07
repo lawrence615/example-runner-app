@@ -12,17 +12,17 @@
         <h2>Items</h2>
         <ul id="sortable" class="pl-0 menu_list js-sortable-group js-drop-target bg-light p-3">
             @foreach ($task->items as $item)
-            <li id="{{ $item->id}}" class="list-group-item d-flex align-items-center" style="cursor: pointer;">
+            <!-- <li id="{{ $item->id}}" class="list-group-item d-flex align-items-center" style="cursor: pointer;">
                 <div class="p-1 course d-block">
                     <i class="fas fa-grip-vertical"></i> {{ $item->description }}
                 </div>
-            </li>
+            </li> -->
 
-            <!-- <li id="{{ $item->id}}" class="ui-state-default" style="list-style-type: none;cursor: pointer;">
+            <li id="{{ $item->id}}" class="ui-state-default" style="list-style-type: none;cursor: pointer;">
                 <div id="{{ 'r_'.$item->id}}" class="p-2 alert alert-secondary fade show alert_box course d-block" optiondata="contact2">
                     <i class="fas fa-grip-vertical"></i> {{ $item->description }}
                 </div>
-            </li> -->
+            </li>
             @endforeach
         </ul>
     </div>
