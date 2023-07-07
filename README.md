@@ -1,13 +1,13 @@
 ## Example Runner App
 
-The Example Runner App is a Laravel app designed to streamline the process of running experiments.
+This GitHub repository provides a collection of simple code examples for executing various tasks, e.g. the implementation of dynamic sortable lists and more. Whether you're a beginner or an experienced developer, these code samples serve as a handy reference for learning and experimenting with different tasks. Explore the repository to enhance your coding skills and streamline your development process.
 
 $~~~~~~~~~~~$
 ### Key Experiments
 Below are existing experiments in the app:
 
 
-#### 1. Sortable lists
+#### Sortable lists
 The experiment shows how you can build a sortable list and also persist changes in the database.
 
 $~~~~~~~~~~~$
